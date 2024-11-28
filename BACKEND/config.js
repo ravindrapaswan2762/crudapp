@@ -1,6 +1,5 @@
 require("dotenv").config();
 const mysql = require("mysql2");
-const urlDB = `mysql://root:vpQhQrIJigYznFGxwopNjHTYEjLpDOJM@mysql.railway.internal:3306/railway`
 
 const db = mysql.createPool({
     host: process.env.DB_HOST,

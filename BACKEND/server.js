@@ -16,46 +16,6 @@ const db = mysql.createPool({
 app.use(cors());
 app.use(express.json());
 
-// Sample Data (Simulating Dropdown Data)
-const dropdownData = [
-    { 
-        id: 1, 
-        itemCode: "INV001", 
-        itemDec: "Paid", 
-        itemTechDec: "test1",
-        identQty: 4,
-        rate: 1000,
-        amount: 5000
-    },
-    {
-        id: 1,
-        itemCode: "INV001",
-        itemDec: "Paid",
-        itemTechDec: "test1",
-        identQty: 4,
-        rate: 1000,
-        amount: 5000
-    },
-    {
-        id: 1,
-        itemCode: "INV001",
-        itemDec: "Paid",
-        itemTechDec: "test1",
-        identQty: 4,
-        rate: 1000,
-        amount: 5000
-    },
-    {
-        id: 1,
-        itemCode: "INV001",
-        itemDec: "Paid",
-        itemTechDec: "test1",
-        identQty: 4,
-        rate: 1000,
-        amount: 5000
-    }
-];
-
 // Routes
 app.get("/api/fetchTableData", (req, res) => {
 
@@ -167,11 +127,11 @@ app.post("/api/add", (req, res) => {
         const query = `INSERT INTO items (itemCode, itemDec, itemTechDec, identQty, rate, amount) VALUES (?, ?, ?, ?, ?, ?)`;
 
         // Generate random data
-        const randomItemCode = "INV" + Math.floor(Math.random() * 10000); // Random Item Code
-        const randomItemTechDesc = "Tech Desc " + Math.floor(Math.random() * 100); // Random Tech Description
-        const randomIdentQty = Math.floor(Math.random() * 100) + 1; // Random Quantity between 1 and 100
-        const randomRate = Math.floor(Math.random() * 500) + 1; // Random Rate between 1 and 500
-        const randomAmount = randomIdentQty * randomRate; // Amount is calculated based on quantity and rate
+        const randomItemCode = "INV" + Math.floor(Math.random() * 10000);
+        const randomItemTechDesc = "Tech Desc " + Math.floor(Math.random() * 100);
+        const randomIdentQty = Math.floor(Math.random() * 100) + 1; 
+        const randomRate = Math.floor(Math.random() * 500) + 1;
+        const randomAmount = randomIdentQty * randomRate; 
 
         const values = [randomItemCode, itemDesc, randomItemTechDesc, randomIdentQty, randomRate, randomAmount];
 
