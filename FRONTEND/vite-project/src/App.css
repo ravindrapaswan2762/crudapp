@@ -1,0 +1,66 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.appContainer{
+  height: auto;
+  width: 100%;
+}
+.topcontainer{
+  height: auto;
+  width: 100%;
+  padding: 30px 10px;
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+;
+}
+.middleContainer{
+  height: auto;
+  width: 100%;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  
+}
+.middleLeft{
+  height: auto;
+  flex-basis: 48%;
+  padding: 10px 30px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+
+}
+.middleRight{
+  height: auto;
+  flex-basis: 48%;
+  padding: 10px 30px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.remarkNoteContainer{
+  
+  height: auto;
+  width: 100%;
+  padding: 10px 30px;
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+
+}
+.bottomContainer{
+
+}
